@@ -1,0 +1,11 @@
+/* Navbar.module.scss */
+.navbar {
+  &.blurred .main-content {
+    filter: blur(4px); // Настройте степень размытия по вашему усмотрению
+    pointer-events: none; // Запрещает взаимодействие с размытыми элементами
+  }
+
+  .main-content {
+    transition: filter 0.3s ease;
+  }
+}

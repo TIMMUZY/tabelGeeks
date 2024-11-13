@@ -1,0 +1,54 @@
+.SelectDirectContainer {
+  position: relative;
+  width: 260px;
+}
+
+.SelectDirect {
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  border: 1px solid #f9ec11;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.text {
+  font-family: 'Inter', sans-serif;
+  color: #f9ec11;
+}
+
+.SelectOptions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #f9ec11;
+  border-radius: 20px;
+  background-color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+
+  .closeSelect {
+    display: flex;
+    justify-content: space-between;
+    color: #f9ec11;
+
+    .closeBtn {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+  color: #f9ec11;
+
+  &:hover {
+    background-color: #f9f9f926;
+  }
+}
