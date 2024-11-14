@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom"; // Import useNavigate instead of useHistory
-import classes from "./WeekList.module.scss"; // Import the correct stylesheet
+import { useNavigate } from "react-router-dom"; 
+import classes from "./WeekList.module.scss"; 
 
 const lessonData = {
   title: "UX/UI design",
@@ -28,9 +28,8 @@ const schedule = [
 export default function WeekList() {
     const navigate = useNavigate();
 
-  const [activeTab, setActiveTab] = useState('week'); // Track the active tab (week/month)
+  const [activeTab, setActiveTab] = useState('week'); 
 
-  // Functions to handle switching between week and month views
   const goToWeekView = () => {
     setActiveTab('week');
     navigate('/weeklist');
@@ -47,7 +46,6 @@ export default function WeekList() {
     <div className={classes.scheduleContain}>
       <div className={classes.titleContainer}>
         <h1 className={classes.scheduleTitle}>Ноябрь 2024</h1>
-        {/* Toggle Switch */}
         <div className={classes.toggleSwitch}>
           <div
             className={`${classes.toggleOption} ${activeTab === 'week' ? classes.active : ''}`}
@@ -64,7 +62,6 @@ export default function WeekList() {
         </div>
       </div>
 
-      {/* Table Schedule */}
       <div className={classes.scheduleContainer}>
         <table className={classes.scheduleTable}>
           <thead>
