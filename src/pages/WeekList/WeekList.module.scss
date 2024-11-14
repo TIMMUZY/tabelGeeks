@@ -1,0 +1,95 @@
+.scheduleContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.scheduleTitle{
+    padding: 10px;
+    margin-left: 6%
+}
+.toggleSwitch {
+    display: flex;
+    background-color: #ccc;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    right: 6%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/* Each Option in the Toggle */
+.toggleOption {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    
+}
+
+/* Active state for each option */
+.toggleOption.active {
+    background-color: #000;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px; /* Rounded corners for the active option */
+
+}
+.scheduleTable {
+    width: 90%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+.scheduleTimeHeader,
+.scheduleDayHeader {
+    font-weight: bold;
+    text-align: right;
+}
+
+
+.scheduleTime,
+.scheduleLesson {
+    padding: 8px;
+    text-align: left;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.scheduleTable th:first-child,
+.scheduleTable td:first-child {
+    border-left: none;
+}
+
+.scheduleTable th:last-child,
+.scheduleTable td:last-child {
+    border-right: none;
+}
+
+.scheduleHeaderRow th {
+    border-bottom: 1px solid black;
+}
+
+.scheduleRow td {
+    border-top: none;
+    border-bottom: none;
+}
+
+.scheduleRow:last-child td {
+    border-bottom: none;
+}
