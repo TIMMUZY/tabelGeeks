@@ -31,7 +31,6 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/* Each Option in the Toggle */
 .toggleOption {
     flex: 1;
     display: flex;
@@ -42,15 +41,13 @@
     transition: all 0.3s ease;
 }
 
-/* Active state for each option */
 .toggleOption.active {
     background-color: #000;
     color: white;
     font-weight: bold;
-    border-radius: 10px; /* Rounded corners for the active option */
+    border-radius: 10px; 
 }
 
-/* Schedule Container (for table) */
 .scheduleContainer {
     display: flex;
     justify-content: center;
@@ -85,7 +82,6 @@
     border-bottom: 1px solid black;
 }
 
-/* Remove vertical borders from the very left and right columns */
 .scheduleTable td:first-child,
 .scheduleTable th:first-child {
     border-left: none;
