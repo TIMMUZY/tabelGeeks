@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './Header.module.scss'
 import Logo from '../../assets/image/Logo.png'
+import selectIcon from '../../assets/icons/selectIcon.svg'
 import SelectDirect from '../SelectDirect/SelectDirect'
 
 const Header = ({ onToggleBlur }) => {
+  const [isEditing, setIsEditing] = useState(false)
+  const [dateValue, setDateValue] = useState('')
+
+  const handleInputChange = (e) => {
+    setDateValue(e.target.value)
+  }
+
+  const handleBlur = () => {
+    if (!dateValue) {
+      setIsEditing(false)
+    }
+  }
+  
   return (
     <div className={classes.header}>
       <div className={classes.headerFlex}>
@@ -23,7 +37,29 @@ const Header = ({ onToggleBlur }) => {
               options={['Кубаныч', 'Сыймык', 'Ислам', 'Тынчтык', 'Бекмырза']}
               onToggleBlur={onToggleBlur}
             />
-            <SelectDirect title='ДАТА' startOption='дд/мм/гггг' options={[]} onToggleBlur={onToggleBlur} />
+            <div className={classes.dateInputContainer}>
+              {!isEditing ? (
+                <div className={classes.dateContainer}>
+                  <div className={classes.dateLabel} onClick={() => setIsEditing(true)}>
+                    <div className={classes.flex}>
+                      <p className={classes.title}>ДАТА</p>
+                      <img src={selectIcon} alt='selectIcon' />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <input
+                  type='date'
+                  className={classes.dateInput}
+                  placeholder='ДД/ММ/ГГГГ'
+                  value={dateValue}
+                  onChange={handleInputChange}
+                  onBlur={handleBlur}
+                  autoFocus
+                />
+              )}
+            </div>
+
             <SelectDirect
               title='АУДИТОРИЯ'
               startOption='1-аудитория'

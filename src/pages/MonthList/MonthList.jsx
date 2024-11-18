@@ -4,11 +4,11 @@ import Modal from '../../components/Modal/Modal';
 import classes from './MonthList.module.scss';
 
 const lessonData = {
-    title: "UX/UI design Урок...",
-    month: "UX/UI design Пробный...",
-    teacher: "Front-end урок...",
-    time: "Front-end Пробный...",
-    room: "Back-end Урок"
+    title: "UX/UI design",
+    month: "UX/UI design",
+    teacher: "Front-end",
+    time: "Front-end",
+    room: "Back-end"
 };
 
 const schedule = [

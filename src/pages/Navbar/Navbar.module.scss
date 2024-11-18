@@ -1,8 +1,7 @@
-/* Navbar.module.scss */
 .navbar {
   &.blurred .main-content {
-    filter: blur(4px); // Настройте степень размытия по вашему усмотрению
-    pointer-events: none; // Запрещает взаимодействие с размытыми элементами
+    filter: blur(4px);
+    pointer-events: none;
   }
 
   .main-content {
