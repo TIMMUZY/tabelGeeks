@@ -1,6 +1,6 @@
 .navbar {
   &.blurred .main-content {
-    filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
   }
 

@@ -1,35 +1,32 @@
-import React, { useState } from 'react'
-import classes from './SelectDirect.module.scss'
-import selectIcon from '../../assets/icons/selectIcon.svg'
-import closeBtn from '../../assets/icons/closeBtn.svg'
+import React, { useState } from 'react';
+import classes from './SelectDirect.module.scss';
+import selectIcon from '../../assets/icons/selectIcon.svg';
+import closeBtn from '../../assets/icons/closeBtn.svg';
 
-const SelectDirect = ({ onToggleBlur, title = '', startOption = '', options = [] }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [setSelectedOption] = useState(startOption)
+const SelectDirect = ({ isActive, onToggle, title = '', startOption = '', options = [] }) => {
+  const [selectedOption, setSelectedOption] = useState(startOption);
 
-
-  const toggleSelect = () => {
-    const newState = !isOpen
-    setIsOpen(newState)
-    onToggleBlur(newState) 
-  }
+  const handleToggle = () => {
+    const newState = !isActive;
+    onToggle(newState); // Передача состояния открытости в родительский компонент
+  };
 
   const handleSelectOption = (option) => {
-    setSelectedOption(option)
-    setIsOpen(false)
-  }
+    setSelectedOption(option);
+    onToggle(false); // Закрыть при выборе
+  };
 
   return (
     <div className={classes.SelectDirectContainer}>
-      <div className={classes.SelectDirect} onClick={toggleSelect}>
+      <div className={classes.SelectDirect} onClick={handleToggle}>
         <p className={classes.text}>{title}</p>
         <img src={selectIcon} alt='selectIcon' />
       </div>
-      {isOpen && (
+      {isActive && (
         <div className={classes.SelectOptions}>
           <div className={classes.closeSelect}>
-            <span className={classes.option}>{startOption}</span>
-            <img onClick={toggleSelect} className={classes.closeBtn} src={closeBtn} alt='close' />
+            <span className={classes.option}>{selectedOption}</span>
+            <img onClick={handleToggle} className={classes.closeBtn} src={closeBtn} alt='close' />
           </div>
           {options.map((option, index) => (
             <p key={index} className={classes.option} onClick={() => handleSelectOption(option)}>
@@ -39,7 +36,7 @@ const SelectDirect = ({ onToggleBlur, title = '', startOption = '', options = []
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default SelectDirect
+export default SelectDirect;

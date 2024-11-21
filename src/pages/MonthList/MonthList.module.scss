@@ -1,93 +1,94 @@
 .scheduleContain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titleContainer {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
 .scheduleTitle {
-    padding: 10px;
-    margin-left: 6%;
+  padding: 10px;
+  margin-left: 6%;
 }
 
 .toggleSwitch {
-    display: flex;
-    background-color: #ccc;
-    border-radius: 10px;
-    width: 200px;
-    height: 30px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    right: 6%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  background-color: #ccc;
+  border-radius: 10px;
+  width: 200px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  right: 6%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .toggleOption {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    font-size: 16px;
-    transition: all 0.3s ease;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .toggleOption.active {
-    background-color: #000;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px; 
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 .scheduleContainer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
 }
 
 .scheduleTable {
-    width: 90%;
-    border-collapse: collapse;
-    text-align: left;
-    font-family: Arial, sans-serif;
+  width: 90%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: Arial, sans-serif;
 }
 
 .scheduleDayHeader {
-    font-weight: bold;
-    text-align: right;
+  font-weight: bold;
+  text-align: right;
 }
 
 .scheduleLesson {
-    padding: 8px;
-    text-align: left;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .scheduleHeaderRow th {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .scheduleRow td {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .scheduleTable td:first-child,
 .scheduleTable th:first-child {
-    border-left: none;
+  border-left: none;
 }
 
 .scheduleTable td:last-child,
 .scheduleTable th:last-child {
-    border-right: none;
+  border-right: none;
 }
